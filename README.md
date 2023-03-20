@@ -1,13 +1,7 @@
 
-[![Latest Stable Version](https://poser.pugx.org/skagarwal/google-places-api/v/stable?format=flat-square)](https://packagist.org/packages/skagarwal/google-places-api)
-[![Latest Unstable Version](https://poser.pugx.org/skagarwal/google-places-api/v/unstable?format=flat-square)](https://packagist.org/packages/skagarwal/google-places-api)
-[![Total Downloads](https://poser.pugx.org/skagarwal/google-places-api/downloads?format=flat-square)](https://packagist.org/packages/skagarwal/google-places-api)
-[![License](https://poser.pugx.org/skagarwal/google-places-api/license?format=flat-square)](https://packagist.org/packages/skagarwal/google-places-api)
-
-
 # Google Places API.
 
-This is a PHP wrapper for **Google Places API Web Service**. And is [Laravel Framework](https://laravel.com/docs/5.2) friendly.
+This is a PHP wrapper for **Google Places API Web Service**
 
 ## About Package
 With just 2 lines of code you can request to any google places api feature. No need to manually perform any curl requests.
@@ -24,14 +18,12 @@ With just 2 lines of code you can request to any google places api feature. No n
 # Installation
 Install it with composer
 ```
-composer require skagarwal/google-places-api
+composer require m1n64/google-places-api
 ```
 
 
 
 # Usage
-
-**Laravel user can see the [Laravel Usage](#laravel-usage) section**
 
 ## Step 1 - Import the class using namespace
 ```php
@@ -63,49 +55,6 @@ function () {
   $response = $googlePlaces->placeAutocomplete('some input'); # line 2
 }
 
-```
-
----
-
-<a name=laravel-usage></a>
-# Use with Laravel
-## For Laravel 5.5
-Auto Discovery added.
-
-## For Laravel 5.4 and below
-## Step 1
-Set up the service provider and facade in the **config\app.php**
-```php
-
-'providers' => [
-....
-....
-SKAgarwal\GoogleApi\ServiceProvider::class,
-];
-
-'aliases' => [
-....
-....
-'GooglePlaces' => SKAgarwal\GoogleApi\Facade::class,
-];
-
-```
-
-## Step 2
-publish the config file with following artisan command
-```
-php artisan vendor:publish --provider="SKAgarwal\GoogleApi\ServiceProvider"
-```
-
-This will create **google.php** file in the config directory.
-
-Set the *API KEY* in this config file.
-
-## Set 3
-Start using the package using Facade.
-
-```
-$response = GooglePlaces::placeAutocomplete('some city');
 ```
 
 ---
